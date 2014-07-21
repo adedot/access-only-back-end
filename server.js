@@ -8,7 +8,7 @@ app.use(express.json());
  
 app.get('/tables', tables.findAll);
 app.get('/tables/:id', tables.findById);
-// Add list of users at table
+
 
 app.post('/person/charge', person.charge)
  

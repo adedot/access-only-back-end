@@ -18,7 +18,7 @@ exports.charge = function(request, response){
     "amount": amount, 
     "description": "Some descriptive text for the debit in the dashboard"
 	}));
-}
+};
 
 // Add group pay
 
