@@ -1,11 +1,30 @@
 {
-  "name": "access-only-back-end",
-  "description": "Access Only Web Service",
+  "name": "ls",
   "version": "0.0.1",
+  "description": "Access Only Web Service",
   "private": true,
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
   "dependencies": {
-    "express": "3.x",
     "body-parser": "~1.4.3",
-    "balanced-official": "~1.1.0"
+    "express": "~3.14.0",
+    "balanced-official": "~1.1.0",
+    "logfmt": "~1.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:AccessOnlyNow/access-only-back-end.git"
+  },
+  "author": "Marcus Finley and Adetola Adewodu",
+  "license": "ISC"
+  "engines": {
+    "node": "0.10.x"
   }
 }
