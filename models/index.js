@@ -23,7 +23,7 @@ var models = [
   'Guestlist'
 ];
 models.forEach(function(model) {
-  module.exports[model] = sequelize.import(__dirname + '/' + model);
+  module.exports[model] = sequelize.import( './' + model);
 });
 
 // models.Place.sync({ force: true });
