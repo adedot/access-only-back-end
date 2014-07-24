@@ -1,0 +1,18 @@
+var models = require('../models');
+
+exports.create = function(request, response) {
+
+  models.Place.create({ name: request.param('name'), address: request.param('address'), city: request.param('city'),
+   state: request.param('state') }).success(function() {
+    response.redirect('/')
+  })
+}
+
+exports.findAllPlaces = function(request, response) {
+
+}
+
+exports.findByName = function(request, response) {
+
+}
+

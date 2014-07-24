@@ -14,7 +14,15 @@
     "body-parser": "~1.4.3",
     "express": "~3.14.0",
     "balanced-official": "~1.1.0",
-    "logfmt": "~1.1.2"
+    "logfmt": "~1.1.2",
+    "sequelize": "~1.7.9",
+    "node-rest-client": "~1.0.0",
+    "pg": "~3.4.0",
+    "lodash": "~2.4.1",
+    "path": "~0.4.9",
+    "node-config": "0.0.2",
+    "config": "~1.0.0",
+    "sequelize-cli": "~0.2.3"
   },
   "devDependencies": {},
   "scripts": {
