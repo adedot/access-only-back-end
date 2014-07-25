@@ -16,25 +16,26 @@ app.set('models', require('./models'));
 
 // Place Resources
 app.post('/places', place.create);
+
 app.get('/places',place.findAllPlaces);
 app.get('/places?:name', place.findByName);
 
 // Product resources
 // Create a product
-app.post('/products/', product.create);
+app.post('/places/:id/products/', product.create);
 
 
 // Get Products
-app.get('/products/tables', product.findAllTables);
-app.get('/products/tables?:name', product.findTablesByName);
-app.get('/products/bottles', product.findAllBottles);
-app.get('/products/bottles?:name', product.findBottlesByName);
+app.get('/places/:id/products/tables', product.findAllTablesByPlace);
+app.get('/places/:id/products/tables?:name', product.findTablesByNameAndPlace);
+app.get('/places/:id/products/bottles', product.findAllBottlesAndPlace);
+app.get('/places/:id/products/bottles?:name', product.findBottlesByNameAndPlace);
 
 // Create User
-app.post('/user', user.create);
+app.post('/user', user.create); 
+
 app.get('/users/', user.findAllUsers);
 app.get('/user/:id', user.findById);
-
 app.get('/user/?name', user.findByName);
 
 // User Resources to add and charge credit card

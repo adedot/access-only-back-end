@@ -5,8 +5,13 @@ var models = require('../models');
 // Create Restful Client
 var Client = require('node-rest-client').Client;
 
-var options_auth={user:'e2676a7b17ece3c39bb6cd5e125cca',
-    password: 'aa315bc4691918312120cb41ceda69610b9d646e'};
+// 'api_secret' => '4bde996ec2668ca9385b3e23019b29e0c121b960',
+// 'api_key' => '8358dc3553eb2fdbdac88f8369fa03'
+
+// :)
+
+var options_auth={user:'8358dc3553eb2fdbdac88f8369fa03',
+    password: '4bde996ec2668ca9385b3e23019b29e0c121b960'};
 
 client = new Client(options_auth);
 

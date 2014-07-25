@@ -5,34 +5,40 @@ var models = require('../models');
 exports.create = function(request, response) {
 
   models.Product.create({ name: request.param('name'), 
-  	sku: request.param('sku'), 
-  	type: request.param('type'),
-   	brand: request.param('brand'),
-   	price: request.param('price'),
-   	is_active: request.param('is_active'),
-   	quantity: request.param('quantity'),
-   	description: request.param('state')
+  	sku: request.body['sku'], 
+  	type: request.body['type'],
+   	brand: request.body['brand'],
+   	price: request.body['price'],
+   	is_active: request.body['is_active'],
+   	quantity: request.body['quantity'],
+   	description: request.body['state']
    }).success(function() {
     response.redirect('/')
   })
 }
 
-exports.findAllTables = function(request, response){
+exports.findAllTablesByPlace = function(request, response){
 
 
-  models.Place.findAll({where: {type: 'table'} }).success(function(result){
+  models.Product.findAll({where: Sequalize.and (
+    {type: 'table'},
+    {placeId:request.param('id')}
+    )
+    
+     }).success(function(result){
 
     response.send(result);
   });
 
 };
 
-exports.findTablesByName = function(request, response){
+exports.findTablesByNameAndPlace = function(request, response){
 
-    models.Place.findAll({ 
+    models.Product.findAll({ 
       where: Sequalize.and(
         {type: 'table'},
-        {name: params('name')}
+        {name: params('name')},
+        {placeId:request.param('id')}
          ).success(function(result){
 
     response.send(result);
@@ -40,20 +46,27 @@ exports.findTablesByName = function(request, response){
     });
 };
 
-exports.findAllBottles = function(request, response){
+exports.findAllBottlesAndPlace = function(request, response){
   
-  models.Place.findAll({where: {type: 'bottle'} }).success(function(result){
+  models.Product.findAll({where:
+   Sequalize.and (
+    {type: 'bottle'},
+    {placeId:request.param('id')}
+    )
+
+  }).success(function(result){
 
     response.send(result);
   });
 
 };
 
-exports.findBottlesByName = function(request, response){
-    models.Place.findAll({ 
+exports.findBottlesByNameAndPlace = function(request, response){
+    models.Product.findAll({ 
       where: Sequalize.and(
         {type: 'bottle'},
-        {name: params('name')}
+        {name: params('name')},
+        {placeId:request.param('id')}
          ).success(function(result){
 
     response.send(result);
