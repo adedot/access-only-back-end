@@ -9,10 +9,19 @@ exports.create = function(request, response) {
 }
 
 exports.findAllPlaces = function(request, response) {
+	models.Place.findAll().success(function(result){
+
+		response.send(result);
+	});
 
 }
 
 exports.findByName = function(request, response) {
+
+	models.Place.findAll({where: {name: param('name')} }).success(function(result){
+
+		response.send(result);
+	});
 
 }
 

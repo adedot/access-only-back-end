@@ -26,9 +26,9 @@ app.post('/products/', product.create);
 
 // Get Products
 app.get('/products/tables', product.findAllTables);
-app.get('/products/tables/:id', product.findTablesById);
+app.get('/products/tables?:name', product.findTablesByName);
 app.get('/products/bottles', product.findAllBottles);
-app.get('/products/bottles/:id', product.findBottlesByName);
+app.get('/products/bottles?:name', product.findBottlesByName);
 
 // Create User
 app.post('/user', user.create);

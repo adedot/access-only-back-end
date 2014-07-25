@@ -18,24 +18,48 @@ exports.create = function(request, response) {
   })
 }
 
-
 exports.findAllTables = function(request, response){
-  response.send([{name:'John Sampson'}, {name:'Wayne Saunders'}]);
+
+
+  models.Place.findAll({where: {type: 'table'} }).success(function(result){
+
+    response.send(result);
+  });
+
 };
 
-exports.findTablesById = function(request, response){
+exports.findTablesByName = function(request, response){
 
-    response.send({id:request.params.id, name: "Table 1", description: "Boss Table", price: 200});
+    models.Place.findAll({ 
+      where: Sequalize.and(
+        {type: 'table'},
+        {name: params('name')}
+         ).success(function(result){
 
+    response.send(result);
+      })
+    });
 };
 
 exports.findAllBottles = function(request, response){
-  response.send([{name:'John Sampson'}, {name:'Wayne Saunders'}]);
+  
+  models.Place.findAll({where: {type: 'bottle'} }).success(function(result){
+
+    response.send(result);
+  });
+
 };
 
 exports.findBottlesByName = function(request, response){
+    models.Place.findAll({ 
+      where: Sequalize.and(
+        {type: 'bottle'},
+        {name: params('name')}
+         ).success(function(result){
 
-    response.send({id:request.params.id, name: "Table 1", description: "Boss Table", price: 200});
+    response.send(result);
+    })
+  });
 
 };
 
