@@ -16,7 +16,7 @@ app.set('models', require('./models'));
 
 // Place Resources
 app.post('/places', place.create);
-app.get('/places/',place.findAllPlaces);
+app.get('/places',place.findAllPlaces);
 app.get('/places?:name', place.findByName);
 
 // Product resources
@@ -37,6 +37,8 @@ app.get('/user/:id', user.findById);
 
 app.get('/user/?name', user.findByName);
 
+// User Resources to add and charge credit card
+app.post('/user/:id/cards', user.addCard);
 // User Resources to make credit card charge
 app.post('/user/charge', user.charge);
 

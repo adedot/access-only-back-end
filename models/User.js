@@ -3,10 +3,10 @@ module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define('User', {
   	 // autoIncrement can be used to create auto_incrementing integer columns
   	id: { type: DataTypes.INTEGER, autoIncrement: true },
-    first_name: DataTypes.STRING,
-    last_name: DataTypes.STRING,
+    firstname: DataTypes.STRING,
+    lastname: DataTypes.STRING,
     email: DataTypes.STRING,
-    number: DataTypes.STRING
+    phone: DataTypes.STRING
   }, {
   tableName: 'users', // this will define the table's name
 	}

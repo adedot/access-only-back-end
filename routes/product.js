@@ -11,8 +11,7 @@ exports.create = function(request, response) {
    	price: request.param('price'),
    	is_active: request.param('is_active'),
    	quantity: request.param('quantity'),
-   	description: request.param('state'), 
-   	placeId: request.param('placeId')
+   	description: request.param('state')
    }).success(function() {
     response.redirect('/')
   })

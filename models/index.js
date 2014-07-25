@@ -37,7 +37,7 @@ models.forEach(function(model) {
 
 // This should occur after the models 
 sequelize
-  .sync({ force: true })
+  .sync({ force: false })
   .complete(function(err) {
     if (!!err) {
       console.log('Unable to connect to the database:', err)
