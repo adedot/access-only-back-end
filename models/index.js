@@ -11,9 +11,6 @@ var Sequelize = require('sequelize')
       sync : {force:true}
     })
 
-
-
-
 // load models
 var models = [
   'Place',
@@ -22,13 +19,10 @@ var models = [
   'Order', 
   'Guestlist'
 ];
+
 models.forEach(function(model) {
   module.exports[model] = sequelize.import( './' + model);
 });
-
-// models.Place.sync({ force: true });
-// models.Product.sync({ force: true });
-
 
 // describe relationships
 (function(m) {
