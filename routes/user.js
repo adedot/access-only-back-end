@@ -87,6 +87,20 @@ exports.addCard = function(request, response){
 
 }
 
+exports.addBank = function(request, response){
+
+  var resource = "users/"+request.params['id']+"/banks"
+
+  // get bank json
+  var bank_info = request.body;
+
+  console.log(bank_info);
+  var crowdTiltResponse = sendCrowdTiltRequest(bank_info, resource);
+
+  response.send(crowdTiltResponse);
+
+}
+
 var sendCrowdTiltRequest = function(request_data, resource){
 
   url = crowdTiltBaseUrl + resource;

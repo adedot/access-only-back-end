@@ -17,62 +17,26 @@ exports.create = function(request, response) {
   })
 }
 
-exports.findAllTablesByPlace = function(request, response){
+exports.findAllProducts = function(request, response){
 
-
-  models.Product.findAll({where: Sequalize.and (
-    {type: 'table'},
-    {placeId:request.param('id')}
-    )
-    
-     }).success(function(result){
+  models.Product.findAll().success(function(result){
 
     response.send(result);
   });
 
 };
 
-exports.findTablesByNameAndPlace = function(request, response){
+exports.findProductsByVenueName = function(request, response){
 
     models.Product.findAll({ 
-      where: Sequalize.and(
-        {type: 'table'},
-        {name: params('name')},
-        {placeId:request.param('id')}
-         ).success(function(result){
+      where: 
+        {venueName:request.query['venuename']}
+      }).success(function(result){
 
     response.send(result);
-      })
     });
 };
 
-exports.findAllBottlesAndPlace = function(request, response){
-  
-  models.Product.findAll({where:
-   Sequalize.and (
-    {type: 'bottle'},
-    {placeId:request.param('id')}
-    )
 
-  }).success(function(result){
-
-    response.send(result);
-  });
-
-};
-
-exports.findBottlesByNameAndPlace = function(request, response){
-    models.Product.findAll({ 
-      where: Sequalize.and(
-        {type: 'bottle'},
-        {name: params('name')},
-        {placeId:request.param('id')}
-         ).success(function(result){
-
-    response.send(result);
-    })
-  });
-
-};
 
 

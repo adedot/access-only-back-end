@@ -1,4 +1,4 @@
-// Access Orders from orders table
+// Access Guestlist from orders table
 module.exports = function(sequelize, DataTypes) {
   var Guestlist = sequelize.define('Guestlist', {
   	 // autoIncrement can be used to create auto_incrementing integer columns
@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
 	},
   {
     associate: function(models) {
-      Guestlist.hasMany(models.User);
+      Guestlist.hasMany(models.User, {as: 'People'});
       Guestlist.hasMany(models.Order);
     }
   })

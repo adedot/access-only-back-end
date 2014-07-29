@@ -14,14 +14,16 @@ module.exports = function(sequelize, DataTypes) {
     brand: DataTypes.STRING,
     price:DataTypes.DECIMAL,
     is_active: DataTypes.BOOLEAN,
-    description: DataTypes.STRING
+    is_featured: DataTypes.BOOLEAN,
+    description: DataTypes.STRING,
+    venueName: DataTypes.STRING
   }, {
   tableName: 'products', // this will define the table's name
 	}
 	,
   {
     associate: function(models) {
-      Product.belongsTo(models.Place)
+      Product.belongsTo(models.Venue);
     }
   })
 
