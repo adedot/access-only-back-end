@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
 	},
   {
     associate: function(models) {
-      OrderItem.hasMany(models.Product);
+      OrderItem.belongsTo(models.Product);
       OrderItem.hasMany(models.Order);
     }
   })

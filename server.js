@@ -3,6 +3,7 @@ var express = require('express'),
     product = require('./routes/product'),
     user = require('./routes/user'),
  	venue = require('./routes/venue'),
+ 	cart = require('./routes/cart'),
  	http    = require('http'),
  	path    = require('path'),
  	models = require('./models')
@@ -25,8 +26,12 @@ app.get('/venues?:name', venue.findByName);
 // Create a product
 app.post('/venues/:id/products/', product.create);
 
+// Add product/item to cart
+app.post('/cart/additem', cart.addCartItem);
+// Check out 
+app.post('/cart/checkout', cart.checkout);
 
-// Get Products
+// Get products
 app.get('/products', product.findAllProducts);
 app.get('/venues/products?:venuename', product.findProductsByVenueName);
 

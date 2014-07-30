@@ -16,7 +16,9 @@ module.exports = function(sequelize, DataTypes) {
     is_active: DataTypes.BOOLEAN,
     is_featured: DataTypes.BOOLEAN,
     description: DataTypes.STRING,
-    venueName: DataTypes.STRING
+    venueName: DataTypes.STRING, 
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
   tableName: 'products', // this will define the table's name
 	}
@@ -24,6 +26,9 @@ module.exports = function(sequelize, DataTypes) {
   {
     associate: function(models) {
       Product.belongsTo(models.Venue);
+      Product.hasMany(models.CartItem);
+      Product.hasMany(models.OrderItem);
+
     }
   })
 
