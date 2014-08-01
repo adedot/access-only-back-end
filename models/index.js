@@ -56,25 +56,12 @@ var Product = sequelize.import(__dirname + '/Product');
 
 // This should occur after the models 
 sequelize
-  .sync({ force: true})
+  .sync({ force: false})
   .complete(function(err) {
     if (!!err) {
       console.log('Unable to connect to the database:', err)
     } else {
       console.log('Connection has been established successfully.')
-
-      // var venueName = "Rosebar";
-
-      // var dtNation = Venue.build({
-      //     name: venueName,
-      //     address: "1215 Connecticut Ave NW Washington,dc 20036",
-      //     city: "Washington",
-      //     state: "DC",
-      //     description:""
-      // });
-
-      // dtNation.save();
-
 
     }
   })
