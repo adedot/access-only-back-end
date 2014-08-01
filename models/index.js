@@ -14,21 +14,6 @@ var Sequelize = require('sequelize')
     })
 
 
-  // Create Postgres Client
-  var client = new pg.Client(
-  {
-
-      user: 'Adetola',
-      password: '',
-      database: cfg.database,
-      host: cfg.uri,
-      port: 5432
-
-  });
-
-
-
-
 // load models
 var models = [
   'Venue',
@@ -78,13 +63,6 @@ sequelize
     } else {
       console.log('Connection has been established successfully.')
 
-      // client.connect();
-      // var stream = client.copyFrom("COPY products (name, sku, type, brand, price, is_active, is_featured,description) FROM '/Users/Adetola/node-projects/access-only-back-end/data/Products.csv' WITH CSV HEADER;");
-      // stream.on('close', function () {
-      //   console.log("Data inserted sucessfully");
-      // });
-      // stream.end();
-
       // var venueName = "Rosebar";
 
       // var dtNation = Venue.build({
@@ -95,28 +73,11 @@ sequelize
       //     description:""
       // });
 
-      // // Use venue name to add bottles
-
       // dtNation.save();
-
-      // var products = Product.build(
-      //   {
-      //     venueName: venueName,
-      //     name: "Belvedere",
-      //     price: 295
-
-
-      // });
-
-      // products.save();
-
 
 
     }
   })
-
-
-
 
 
 // export connection

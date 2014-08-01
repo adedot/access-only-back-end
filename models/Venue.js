@@ -7,8 +7,14 @@ module.exports = function(sequelize, DataTypes) {
     address: DataTypes.STRING,
     city: DataTypes.STRING,
     state: DataTypes.STRING,
+    zipcode: DataTypes.STRING,
+    phone: DataTypes.STRING,
+    email: DataTypes.STRING,
+    url: DataTypes.STRING,
     description: DataTypes.STRING,
-    dressCode: DataTypes.STRING
+    dressCode: DataTypes.STRING,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   }, {
   tableName: 'venues', // this will define the table's name
 	},
