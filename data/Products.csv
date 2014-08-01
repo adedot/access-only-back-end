@@ -1,47 +1,136 @@
 Name,Sku,type,Brand,Price,Is_active,Is_feautured,venueName,description
-BelvedereMag,,Vodka,,550,,,Rose Bar,
-Ciroc&flavors,,Vodka,,395,,,Rose Bar,
-Ketel one,,Vodka,,300,,,Rose Bar,
-Stolichnaya,,Vodka,,275,,,Rose Bar,
-Grey Goose,,vodka,,350,,,Rose Bar,
-Grey Goose Mag,,vodka,,625,,,Rose Bar,
-Belvedere,,Vodka,,295,,,Rose Bar,
-jose Cuervo gold,,Tequila,,225,,,Rose Bar,
-patron Silver,,Tequila,,375,,,Rose Bar,
-Patron X.O. Café,,Tequila,,275,,,Rose Bar,
-Patron Platinum,,Tequila,,750,,,Rose Bar,
-Bombay Sapphire,,Gin,,250,,,Rose Bar,
-Tanqueray,,Gin,,225,,,Rose Bar,
-Bacardi/bacardi Limon,,Rum,,225,,,Rose Bar,
-Captain Morgan's,,Rum,,250,,,Rose Bar,
-Hennessy V.S.O.P. Privilege,,Cognac,,525,,,Rose Bar,
-Hennessy V.S.,,Cognac,,350,,,Rose Bar,
-D'usse,,Cognac,,425,,,Rose Bar,
-Remy Martin V.S.O.P,,Cognac,,495,,,Rose Bar,
-Grand Marnier,,Cognac,,300,,,Rose Bar,
-GlenMorangie Ealanta,,Whiskey/Scotches,,500,,,Rose Bar,
-Glenmorangie Single Malt,,Whiskey/Scotches,,375,,,Rose Bar,
-Jack Dainels,,Whiskey/Scotches,,250,,,Rose Bar,
-Johnie Walker black,,Whiskey/Scotches,,350,,,Rose Bar,
-Johnie Walker blue,,Whiskey/Scotches,,695,,,Rose Bar,
-Crown royal,,Whiskey/Scotches,,295,,,Rose Bar,
-Chivas Regal,,Whiskey/Scotches,,325,,,Rose Bar,
-Dewar's white label,,Whiskey/Scotches,,250,,,Rose Bar,
-Makers Mark,,Whiskey/Scotches,,275,,,Rose Bar,
-Moet & Chandon imperial Rose 6L,,Champagne,,3200,,,Rose Bar,
-Dom Perigon Rose,,Champagne,,1200,,,Rose Bar,
-Armand De Brignac Ace Of Spades,,Champagne,,1000,,,Rose Bar,
-Louis Roderer Cristal,,Champagne,,695,,,Rose Bar,
-Moet Ice Imperial MAG ,,Champagne,,675,,,Rose Bar,
-Moet & Chandon imperial Mag,,Champagne,,305,,,Rose Bar,
-Moet&Chadndon Nectar imperial rose,,Champagne,,250,,,Rose Bar,
-Beau joie Brut Rose,,Champagne,,250,,,Rose Bar,
-Veuve Cliquot Yellow Label,,Champagne,,175,,,Rose Bar,
-Veuve Clicquot Demi-sec,,Champagne,,175,,,Rose Bar,
-Moet&chandon nectar imperial,,Champagne,,165,,,Rose Bar,
-Moet&Chandon Imperial,,Champagne,,150,,,Rose Bar,
- Belarie Rose,,Champagne,,150,,,Rose Bar,
-Rose Bar Sparkling Moscato,,Champagne,,125,,,Rose Bar,
-Dom perigon vintage,,Champagne,,550,,,Rose Bar,
-Moet Ice Imperial ,,Champagne,,375,,,Rose Bar,
-Moet & Chandon imperial rose Mag,,,,525,,,Rose Bar,
+BelvedereMag,,Bottle,,550,,,Rosebar,Vodka
+Ciroc & flavors,,Bottle,,395,,,Rosebar,Vodka
+Ketel one,,Bottle,,300,,,Rosebar,Vodka
+Stolichnaya,,Bottle,,275,,,Rosebar,Vodka
+Grey Goose,,Bottle,,350,,,Rosebar,vodka
+Grey Goose Mag,,Bottle,,625,,,Rosebar,vodka
+Belvedere,,Bottle,,295,,,Rosebar,Vodka
+jose Cuervo gold,,Bottle,,225,,,Rosebar,Tequila
+patron Silver,,Bottle,,375,,,Rosebar,Tequila
+Patron X.O. Café,,Bottle,,275,,,Rosebar,Tequila
+Patron Platinum,,Bottle,,750,,,Rosebar,Tequila
+Bombay Sapphire,,Bottle,,250,,,Rosebar,Gin
+Tanqueray,,Bottle,,225,,,Rosebar,Gin
+Bacardi/bacardi Limon,,Bottle,,225,,,Rosebar,Rum
+Captain Morgan's,,Bottle,,250,,,Rosebar,Rum
+Hennessy V.S.O.P. Privilege,,Bottle,,525,,,Rosebar,Cognac
+Hennessy V.S.,,Bottle,,350,,,Rosebar,Cognac
+D'usse,,Bottle,,425,,,Rosebar,Cognac
+Remy Martin V.S.O.P,,Bottle,,495,,,Rosebar,Cognac
+Grand Marnier,,Bottle,,300,,,Rosebar,Cognac
+GlenMorangie Ealanta,,Bottle,,500,,,Rosebar,Whiskey/Scotches
+Glenmorangie Single Malt,,Bottle,,375,,,Rosebar,Whiskey/Scotches
+Jack Dainels,,Bottle,,250,,,Rosebar,Whiskey/Scotches
+Johnie Walker black,,Bottle,,350,,,Rosebar,Whiskey/Scotches
+Johnie Walker blue,,Bottle,,695,,,Rosebar,Whiskey/Scotches
+Crown royal,,Bottle,,295,,,Rosebar,Whiskey/Scotches
+Chivas Regal,,Bottle,,325,,,Rosebar,Whiskey/Scotches
+Dewar's white label,,Bottle,,250,,,Rosebar,Whiskey/Scotches
+Makers Mark,,Bottle,,275,,,Rosebar,Whiskey/Scotches
+Moet & Chandon imperial Rose 6L,,Bottle,,3200,,,Rosebar,Champagne
+Dom Perigon Rose,,Bottle,,1200,,,Rosebar,Champagne
+Armand De Brignac Ace Of Spades,,Bottle,,1000,,,Rosebar,Champagne
+Louis Roderer Cristal,,Bottle,,695,,,Rosebar,Champagne
+Moet Ice Imperial MAG ,,Bottle,,675,,,Rosebar,Champagne
+Moet & Chandon imperial Mag,,Bottle,,305,,,Rosebar,Champagne
+Moet&Chadndon Nectar imperial rose,,Bottle,,250,,,Rosebar,Champagne
+Beau joie Brut Rose,,Bottle,,250,,,Rosebar,Champagne
+Veuve Cliquot Yellow Label,,Bottle,,175,,,Rosebar,Champagne
+Veuve Clicquot Demi-sec,,Bottle,,175,,,Rosebar,Champagne
+Moet & chandon nectar imperial,,Bottle,,165,,,Rosebar,Champagne
+Moet & Chandon Imperial,,Bottle,,150,,,Rosebar,Champagne
+Belarie Rose,,Bottle,,150,,,Rosebar,Champagne
+Rosebar Sparkling Moscato,,Bottle,,125,,,Rosebar,Champagne
+Dom perigon vintage,,Bottle,,550,,,Rosebar,Champagne
+Moet Ice Imperial ,,Bottle,,375,,,Rosebar,Champagne
+Moet & Chandon imperial rose Mag,,Bottle,,525,,,Rosebar,
+Absolut,,Bottle,,$200,,,Bar7,Vodka
+Absolut falvors,,Bottle,,$200,,,bar7,vodka
+Belvedere,,Bottle,,$250,,,Bar7,vodka
+Belvedre Intense,,Bottle,,$250,,,Bar7,vodka
+Ciroc&flavors,,Bottle,,$300,,,Bar7,vodka
+grey goose,,Bottle,,$350,,,Bar7,vodka
+Ketel one,,Bottle,,$250,,,Bar7,vodka
+Ketel one falavors,,Bottle,,$250,,,Bar7,vodka
+Stolichnaya Elite,,Bottle,,$400,,,Bar7,Vodka
+stolichanaya falvors,,Bottle,,$200,,,Bar7,Vodka
+Ciroc,,Bottle,,$300,,,Bar7,Vodka
+Don julio silver,,Bottle,,250,,,Bar7,Tequila
+jose Cuervo ,,Bottle,,$200,,,Bar7,Tequila
+jose Cuervo 1800,,Bottle,,$250,,,Bar7,tequila
+patron silver,,Bottle,,$375,,,Bar7,Tequila
+Ace of Spades,,Bottle,,$800,,,Bar7,Champagne
+Cristal,,Bottle,,$600,,,Bar7,Champagne
+Dom Perignon,,Bottle,,$350,,,Bar7,Champagne
+Moet white Star,,Bottle,,$100,,,Bar7,Champagne
+Moet Nectar ,,Bottle,,$150,,,Bar7,Champagne
+Moet Nectar rose,,Bottle,,$200,,,Bar7,Champagne
+Moscato,,Bottle,,$75,,,Bar7,Champagne
+Nuvo,,Bottle,,$100,,,Bar7,Champagne
+Nuvo Lemon Sorbet,,Bottle,,$150,,,Bar7,Champagne
+Veuve Cliquot Yellow Label,,Bottle,,$150,,,Bar7,Champagne
+veuve cliquot demi sec,,Bottle,,$200,,,Bar7,Champagne
+Grand Marnier,,Bottle,,$250,,,Bar7,Cognacs
+Hennessy Vs,,Bottle,,$250,,,Bar7,Cognacs
+Hennessy Vsop,,Bottle,,$300,,,Bar7,Cognacs
+HennessyXo,,Bottle,,$500,,,Bar7,Cognacs
+Hypnotiq,,Bottle,,250,,,Bar7,Cognacs
+Remy Vsop,,Bottle,,$300,,,Bar7,Cognacs
+Remy XO,,Bottle,,$500,,,Bar7,Cognacs
+Remy1738,,Bottle,,$350,,,Bar7,Cognacs
+AtlAintico,,Bottle,,$225,,,Bar7,Rum
+CaptainMorgan,,Bottle,,$200,,,Bar7,Rum
+BacardiSuperior,,Bottle,,$200,,,Bar7,Rum
+BacardiFlavors,,Bottle,,200,,,Bar7,Rum
+BacardiLIght,,Bottle,,$200,,,Bar7,Rum
+Bacardi 151,,Bottle,,$250,,,Bar7,Rum
+Malibu,,Bottle,,$200,,,Bar7,Rum
+Crown Royal black,,Bottle,,$250,,,Bar7,Scotch&whiskey
+JackDaniels,,Bottle,,$200,,,Bar7,Scotch&whiskey
+JackDanielsHoney,,Bottle,,$200,,,Bar7,Scotch&whiskey
+Jameson,,Bottle,,$300,,,Bar7,Scotch&whiskey
+JohnniewalkerBlack,,Bottle,,$275,,,Bar7,Scotch&whiskey
+JohnniewalkerBLUE,,Bottle,,$650,,,Bar7,Scotch&whiskey
+Johnnie walkerGold,,Bottle,,$350,,,Bar7,Scotch&whiskey
+MakersMark,,Bottle,,$300,,,Bar7,Scotch&whiskey
+Bombay Sapphire,,Bottle,,$250,,,Bar7,Gin
+Tanqueray,,Bottle,,$200,,,Bar7,Gin
+Ciroc,,Bottle,,$350,,,luxLonge,Vodka
+ciroc/coconut/peach/redberry,,Bottle,,$350,,,luxLonge,Vodka
+Grey Goose,,Bottle,,$350,,,luxLonge,Vodka
+Absolut,,Bottle,,$250,,,luxLonge,vodka
+Kettle One,,Bottle,,$275,,,luxLonge,vodka
+Stolichnaya,,Bottle,,$200,,,luxLonge,vodka
+Bacardi,,Bottle,,$250,,,luxLonge,Rum
+Bacardi151,,Bottle,,$250,,,luxLonge,Rum
+CaptainMorgan,,Bottle,,$200,,,luxLonge,Rum
+Malibu,,Bottle,,$200,,,luxLonge,Rum
+Don julio Silver,,Bottle,,$375,,,luxLonge,Tequila
+Jose Cuervo Gold,,Bottle,,$275,,,luxLonge,Tequila
+Patron Silver,,Bottle,,$375,,,luxLonge,Tequila
+Ace of Spades,,Bottle,,$800,,,luxLonge,Champagne
+Ace of Spades Rose,,Bottle,,"$1,000",,,luxLonge,Champagne
+Dom perignon,,Bottle,,$300,,,luxLonge,Champagne
+Dom PERIGION ROSE,,Bottle,,$550,,,luxLonge,Champagne
+Moet Nectar,,Bottle,,$150,,,luxLonge,Champagne
+Moet Rose,,Bottle,,$200,,,luxLonge,Champagne
+Nuvo,,Bottle,,$175,,,luxLonge,Champagne
+Veuve Cliquot Demi Sec,,Bottle,,$200,,,luxLonge,Champagne
+Veuve Cliquot yello label,,Bottle,,$200,,,luxLonge,Champagne
+veuve Cliquot rose,,Bottle,,$400,,,luxLonge,CHampagne
+Bombay Sapphire,,Bottle,,$275,,,luxLonge,Gin
+Tanqueray,,Bottle,,$250,,,luxLonge,Gin
+Hennessy VS,,Bottle,,$300,,,luxLonge,Cognacs
+Hennessy Vsop,,Bottle,,$450,,,LuxLonge,Cognacs
+Hennessy Xo,,Bottle,,$695,,,LuxLonge,Cognacs
+Remy Martin VSOP,,Bottle,,$350,,,LuxLonge,Cognacs
+Remy Martin1738,,Bottle,,$400,,,LuxLonge,Cognacs
+Remy Martin XO,,Bottle,,$600,,,LuxLonge,Cognacs
+Remy Louis,,Bottle,,"5,000",,,LuxLonge,Cognacs
+Crown Royal black,,Bottle,,$300,,,LuxLonge,Scotch&whiskey
+Jack daniels,,Bottle,,$250,,,LuxLonge,Scotch&whiskey
+Johnnie walkerblue,,Bottle,,$600,,,LuxLonge,Scotch&whiskey
+Johnnie WalkerBlack,,Bottle,,$350,,,LuxLonge,Scotch&whiskey
+Macallan 12,,Bottle,,$350,,,LuxLonge,Scotch&whiskey
+,,Bottle,,,,,LuxLonge,

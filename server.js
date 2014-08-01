@@ -15,6 +15,7 @@ var app = express();
 app.use(express.json());
 app.use(express.urlencoded());
 
+// This is for cross site requests from other applications
 app.all('*', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header('Access-Control-Allow-Methods', 'OPTIONS,GET,POST,PUT,DELETE');
