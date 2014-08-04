@@ -45,7 +45,7 @@ exports.removeCartItem = function(request, response){
 exports.checkout = function(request, response){
 
 	// get token and amount
-	var amount = request.body['amount'];
+	var amount = parseInt(request.body['amount']) * 100;
 	var token = request.body['uri']; 
 	console.log(token);
 
@@ -58,6 +58,7 @@ exports.checkout = function(request, response){
 	});
 
 	// Check debit transaction 
+	console.log("Cart id number is " + request.body['cartId']);
 
 	// create order
 	models.Order.create({
@@ -68,7 +69,7 @@ exports.checkout = function(request, response){
 		// Get all the cart items for transaction/request 
 		models.CartItem.findAll({
 			where: 
-        {cartId:request.body['cartid']}
+        {cartId:request.body['cartId']}
 
 		}).success(function(cartItems){
 
@@ -76,9 +77,10 @@ exports.checkout = function(request, response){
 			for (cartItem in cartItems){
 
 				console.log("The cartItem is " + cartItems[0]);
+
 				// create order item
 				models.OrderItem.create({
-					orderId: order.id,
+					orderId: debit_transaction.debits[0].transaction_number,
 					productId: cartItems[0].productId,
 					price: amount // Need to add cartItems.price
 				}).success(function(){});
@@ -87,10 +89,8 @@ exports.checkout = function(request, response){
 				
 		});
 
-		response.send(debit_transaction);
-
-	  	// empty cart?
-
 	});
+
+	response.send(debit_transaction);
 
 }
