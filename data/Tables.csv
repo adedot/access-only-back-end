@@ -1,0 +1,13 @@
+Name,Sku,type,Brand,Price,Is_active,Is_feautured,venueName,description,venueId
+Table 100,,Table,,500,,,Rose Bar,Table with $100 deposit. 1 bottle of Ciroc included. Only 10 quests,2
+Table 200,,Table,,750,,,Rose Bar,Table with $200 deposit. 2 bottles of Ciroc included. Only 10 quests,2
+Table 300,,Table,,1000,,,Rose Bar,Table with $300 deposit. 3 bottles of Ciroc included. Only 10 quests,2
+Table 100,,Table,,500,,,Bar 7,Table with $100 deposit. 1 bottle of Ciroc included. Only 10 quests,1
+Table 200,,Table,,750,,,Bar 7,Table with $200 deposit. 2 bottles of Ciroc included. Only 10 quests,1
+Table 300,,Table,,1000,,,Bar 7,Table with $300 deposit. 3 bottles of Ciroc included. Only 10 quests,1
+Table 100,,Table,,500,,,Lux Lounge,Table with $100 deposit. 1 bottle of Ciroc included. Only 10 quests,3
+Table 200,,Table,,750,,,Lux Lounge,Table with $200 deposit. 2 bottles of Ciroc included. Only 10 quests,3
+Table 300,,Table,,1000,,,Lux Lounge,Table with $300 deposit. 3 bottles of Ciroc included. Only 10 quests,3
+Table 100,,Table,,500,,,Shadow Room,Table with $100 deposit. 1 bottle of Ciroc included. Only 10 quests,4
+Table 200,,Table,,750,,,Shadow Room,Table with $200 deposit. 2 bottles of Ciroc included. Only 10 quests,4
+Table 300,,Table,,1000,,,Shadow Room,Table with $300 deposit. 3 bottles of Ciroc included. Only 10 quests,4
