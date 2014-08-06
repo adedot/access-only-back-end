@@ -62,8 +62,9 @@ exports.checkout = function(request, response){
 
 	// create order
 	models.Order.create({
+		contact_email: request.body['email'],
+    	contact_phone: request.body['phone'],
     	status: 'Submitted'
-
 	}).success(function(order){
 
 		// Get all the cart items for transaction/request 
