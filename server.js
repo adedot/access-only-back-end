@@ -33,6 +33,7 @@ app.post('/venues', venue.create);
 
 app.get('/venues',venue.findAllVenues);
 app.get('/venues?:name', venue.findByName);
+app.get('/venues/:id', venue.findById);
 
 // Product resources
 // Create a product

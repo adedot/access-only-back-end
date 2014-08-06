@@ -27,3 +27,11 @@ exports.findByName = function(request, response) {
 
 }
 
+exports.findById = function(request, response) {
+
+	models.Venue.findAll({where: {id: request.param('id')} }).success(function(result){
+
+		response.send(result);
+	});
+
+}
