@@ -11,6 +11,7 @@ exports.create = function(request, response) {
 }
 
 exports.findAllVenues = function(request, response) {
+	
 	models.Venue.findAll().success(function(result){
 
 		response.send(result);

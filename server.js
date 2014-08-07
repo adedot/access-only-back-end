@@ -47,6 +47,8 @@ app.post('/cart/checkout', cart.checkout);
 // Get products
 app.get('/products', product.findAllProducts);
 app.get('/venues/products?:venuename', product.findProductsByVenueName);
+app.get('/venues/products/:id', product.findProductsByVenueId);
+
 
 
 // Create User
