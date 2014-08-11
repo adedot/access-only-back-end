@@ -4,6 +4,7 @@ var express = require('express'),
     user = require('./routes/user'),
  	venue = require('./routes/venue'),
  	cart = require('./routes/cart'),
+ 	order = require('./routes/order')
  	http    = require('http'),
  	path    = require('path'),
  	models = require('./models')
@@ -49,14 +50,18 @@ app.get('/products', product.findAllProducts);
 app.get('/venues/products?:venuename', product.findProductsByVenueName);
 app.get('/venues/products/:id', product.findProductsByVenueId);
 
-
+// Get orders
+app.get('/orders', order.getOrders);
+app.get('/users/orders/:id', order.getOrdersByUser);
+app.get('/venues/orders/:id', order.getOrdersByVenue);
 
 // Create User
 app.post('/user', user.create); 
 
 app.get('/users/', user.findAllUsers);
-app.get('/user/:id', user.findById);
-app.get('/user/?name', user.findByName);
+app.get('/users/:id', user.findById);
+app.get('/users/?name', user.findByName);
+// app.get('/venues/users/:id'); TODO 
 
 // User Resources to add bank
 app.post('/user/:id/banks', user.addBank);

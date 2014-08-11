@@ -13,6 +13,7 @@ module.exports = function(sequelize, DataTypes) {
     associate: function(models) {
       Order.hasMany(models.OrderItem);
       Order.belongsTo(models.User);
+      Order.belongsTo(models.Venue);
     }
   })
 

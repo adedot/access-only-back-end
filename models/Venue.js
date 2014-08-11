@@ -20,11 +20,10 @@ module.exports = function(sequelize, DataTypes) {
 	},
   {
     associate: function(models) {
-      Venue.hasMany(models.Product)
+      Venue.hasMany(models.Product);
+      Venue.hasMany(models.Orders);
     }
   })
 
   return Venue
 }
-
-// Add Venue

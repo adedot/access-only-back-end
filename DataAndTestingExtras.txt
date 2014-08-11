@@ -1,0 +1,17 @@
+Data loading and testing instructions: 
+
+
+Sucessful Testing Credit Cards: 
+4111111111111111
+5105105105105100
+341111111111111
+4342561111111118
+
+
+// Load Venues Data into venues table
+COPY venues (name,address,city,state,zipcode,phone,email,url) FROM '/Users/Adetola/node-projects/access-only-back-end/data/SampleNightclubs.csv' WITH CSV HEADER
+
+// Load products data in to products table
+
+COPY products (name, sku, type, brand, price, is_active, is_featured, "venueName", description, "venueId" ) FROM '/Users/Adetola/node-projects/access-only-back-end/data/Products.csv' WITH CSV HEADER;
+

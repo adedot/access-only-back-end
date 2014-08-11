@@ -36,6 +36,7 @@ var Product = sequelize.import(__dirname + '/Product');
 (function(m) {
   m.Product.belongsTo(m.Venue, {foreignKey: 'venueName'});
   m.Venue.hasMany(m.Product);
+  m.Venue.hasMany(m.Order);
 
   m.OrderItem.belongsTo(m.Product);
   m.CartItem.belongsTo(m.Product);
@@ -50,13 +51,14 @@ var Product = sequelize.import(__dirname + '/Product');
   m.Guestlist.hasMany(m.User, {as: 'People', through: 'guestlist_people' });
   m.User.hasMany(m.Guestlist, {through: 'guestlist_people' });
   m.Guestlist.hasMany(m.Order);
-  m.User.hasMany(m.Order);  
+  m.User.hasMany(m.Order);
+  m.Order.belongsTo(m.Venue);  
 
 })(module.exports);
 
 // This should occur after the models 
 sequelize
-  .sync({ force: false})
+  .sync({ force: true})
   .complete(function(err) {
     if (!!err) {
       console.log('Unable to connect to the database:', err)
