@@ -62,6 +62,8 @@ exports.checkout = function(request, response){
 
 	// create order
 	models.Order.create({
+		venueId: request.body['venueId'],
+		contact_name: request.body['name'],
 		contact_email: request.body['email'],
     	contact_phone: request.body['phone'],
     	status: 'Submitted'
@@ -75,16 +77,19 @@ exports.checkout = function(request, response){
 		}).success(function(cartItems){
 
 			// for each cart item
-			for (cartItem in cartItems){
+			for (item_count in cartItems){
 
-				console.log("The cartItem is " + cartItems[0]);
+				console.log("The cartItem is " + cartItems[item_count]);
 
 				// create order item
 				models.OrderItem.create({
 					orderId: debit_transaction.debits[0].transaction_number,
 					productId: cartItems[0].productId,
+					quantity: 1, // Will change later
 					price: amount // Need to add cartItems.price
-				}).success(function(){});
+				}).success(function(){
+
+				});
 
 			}
 				

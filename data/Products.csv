@@ -1,29 +1,15 @@
 Name,Sku,type,Brand,Price,Is_active,Is_feautured,venueName,description,venueId
-Table 100,,Table,,500,,,Rose Bar,Table with $100 deposit. 1 bottle of Ciroc included. Only 10 quests,2
-Table 200,,Table,,750,,,Rose Bar,Table with $200 deposit. 2 bottles of Ciroc included. Only 10 quests,2
-Table 300,,Table,,1000,,,Rose Bar,Table with $300 deposit. 3 bottles of Ciroc included. Only 10 quests,2
-Entry Package 1,,Entry,,50,,,Rose Bar,Up to 4 guests,2
-Entry Package 2,,Entry,,100,,,Rose Bar,Up to 10 guests,2
-Car Rental,,Car,,50,,,Rose Bar,Car Rental for the day,2
-Guestlist Pass,,Gueslist,,60,,,Rose Bar,Monthly Subscription for entry,2
-Table 100,,Table,,500,,,Bar 7,Table with $100 deposit. 1 bottle of Ciroc included. Only 10 quests,1
-Table 200,,Table,,750,,,Bar 7,Table with $200 deposit. 2 bottles of Ciroc included. Only 10 quests,1
-Table 300,,Table,,1000,,,Bar 7,Table with $300 deposit. 3 bottles of Ciroc included. Only 10 quests,1
-Entry Package 1,,Entry,,50,,,Bar 7,Up to 4 guests,1
-Entry Package 2,,Entry,,100,,,Bar 7,Up to 10 guests,1
-Car Rental,,Car,,50,,,Bar 7,Car Rental for the day,1
-Guestlist Pass,,Gueslist,,60,,,Bar 7,Monthly Subscription for entry,1
-Table 100,,Table,,500,,,Lux Lounge,Table with $100 deposit. 1 bottle of Ciroc included. Only 10 quests,3
-Table 200,,Table,,750,,,Lux Lounge,Table with $200 deposit. 2 bottles of Ciroc included. Only 10 quests,3
-Table 300,,Table,,1000,,,Lux Lounge,Table with $300 deposit. 3 bottles of Ciroc included. Only 10 quests,3
-Entry Package 1,,Entry,,50,,,Lux Lounge,Up to 4 guests,3
-Entry Package 2,,Entry,,100,,,Lux Lounge,Up to 10 guests,3
-Car Rental,,Car,,50,,,Lux Lounge,Car Rental for the day,3
-Guestlist Pass,,Gueslist,,60,,,Lux Lounge,Monthly Subscription for entry,3
-Table 100,,Table,,500,,,Shadow Room,Table with $100 deposit. 1 bottle of Ciroc included. Only 10 quests,4
-Table 200,,Table,,750,,,Shadow Room,Table with $200 deposit. 2 bottles of Ciroc included. Only 10 quests,4
-Table 300,,Table,,1000,,,Shadow Room,Table with $300 deposit. 3 bottles of Ciroc included. Only 10 quests,4
-Entry Package 1,,Entry,,50,,,Shadow Room,Up to 4 guests,4
-Entry Package 2,,Entry,,100,,,Shadow Room,Up to 10 guests,4
-Car Rental,,Car,,50,,,Shadow Room,Car Rental for the day,4
-Guestlist Pass,,Gueslist,,60,,,Shadow Room,Monthly Subscription for entry,4
+Table 100,,Table,,500,,,Shadow Room,Table with $100 deposit. 1 bottle of Ciroc included. Only 10 quests,2
+Table 200,,Table,,750,,,Shadow Room,Table with $200 deposit. 2 bottles of Ciroc included. Only 10 quests,2
+Table 300,,Table,,1000,,,Shadow Room,Table with $300 deposit. 3 bottles of Ciroc included. Only 10 quests,2
+Entry Package 1,,Entry,,50,,,Shadow Room,Up to 4 guests,2
+Entry Package 2,,Entry,,100,,,Shadow Room,Up to 10 guests,2
+Car Rental,,Car,,50,,,Shadow Room,Car Rental for the day,2
+Guestlist Pass,,Gueslist,,60,,,Shadow Room,Monthly Subscription for entry,2
+Table 100,,Table,,500,,,Rose Bar,Table with $100 deposit. 1 bottle of Ciroc included. Only 10 quests,1
+Table 200,,Table,,750,,,Rose Bar,Table with $200 deposit. 2 bottles of Ciroc included. Only 10 quests,1
+Table 300,,Table,,1000,,,Rose Bar,Table with $300 deposit. 3 bottles of Ciroc included. Only 10 quests,1
+Entry Package 1,,Entry,,50,,,Rose Bar,Up to 4 guests,1
+Entry Package 2,,Entry,,100,,,Rose Bar,Up to 10 guests,1
+Car Rental,,Car,,50,,,Rose Bar,Car Rental for the day,1
+Guestlist Pass,,Gueslist,,60,,,Rose Bar,Monthly Subscription for entry,1
