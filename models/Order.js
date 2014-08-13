@@ -6,7 +6,8 @@ module.exports = function(sequelize, DataTypes) {
     contact_name: DataTypes.STRING,
     contact_email: DataTypes.STRING,
     contact_phone: DataTypes.STRING,
-    status: DataTypes.STRING
+    status: DataTypes.STRING,
+    total:DataTypes.DECIMAL,
   }, {
     tableName: 'orders', // this will define the table's name
 	},
@@ -18,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   },
   {
-    instanceMethods: {
+    getterMethods: {
       total: function() {
         var total = 0.0
         total = total.fixed(2);

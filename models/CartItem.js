@@ -4,7 +4,8 @@ module.exports = function(sequelize, DataTypes) {
   	 // autoIncrement can be used to create auto_incrementing integer columns
   	cartId: { type: DataTypes.INTEGER, primaryKey: true},
     productId:{ type: DataTypes.INTEGER, primaryKey: true},
-    quantity: DataTypes.INTEGER
+    quantity: DataTypes.INTEGER,
+    price:DataTypes.DECIMAL
   }, {
   tableName: 'cartitems', // this will define the table's name
 	}

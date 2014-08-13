@@ -6,13 +6,14 @@ var util = require('util');
 // get all the orders
 exports.getOrders = function(request, response) {
 
+	var sqlQuery = 'select * from orders join venues ON orders."venueId" = venues.id';
 
+	console.log(sqlQuery);
 
-	models.Order.findAll().success(function(result){
+	models.sequelize.query(sqlQuery).success(function(orders){
 
-
-    	response.send(result);
-  });
+    	response.send(orders);
+    });
 
 }
 

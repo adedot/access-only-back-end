@@ -45,7 +45,7 @@ exports.removeCartItem = function(request, response){
 exports.checkout = function(request, response){
 
 	// get token and amount
-	var amount = parseInt(request.body['amount']) * 100;
+	var amount = parseInt(request.body['amount']);
 	var token = request.body['uri']; 
 	console.log(token);
 
@@ -53,12 +53,13 @@ exports.checkout = function(request, response){
 
 	var debit_transaction = balanced.get(token).debit({
     "appears_on_statement_as": "Statement text", 
-    "amount": amount, 
+    "amount": amount * 100, 
     "description": "Some descriptive text for the debit in the dashboard"
 	});
 
 	// Check debit transaction 
 	console.log("Cart id number is " + request.body['cartId']);
+
 
 	// create order
 	models.Order.create({
@@ -66,7 +67,8 @@ exports.checkout = function(request, response){
 		contact_name: request.body['name'],
 		contact_email: request.body['email'],
     	contact_phone: request.body['phone'],
-    	status: 'Submitted'
+    	status: 'Submitted',
+    	total: amount
 	}).success(function(order){
 
 		// Get all the cart items for transaction/request 
@@ -76,8 +78,10 @@ exports.checkout = function(request, response){
 
 		}).success(function(cartItems){
 
+
 			// for each cart item
 			for (item_count in cartItems){
+
 
 				console.log("The cartItem is " + cartItems[item_count]);
 
@@ -86,9 +90,10 @@ exports.checkout = function(request, response){
 					orderId: debit_transaction.debits[0].transaction_number,
 					productId: cartItems[0].productId,
 					quantity: 1, // Will change later
-					price: amount // Need to add cartItems.price
+					price: amount, // Need to add cartItems.price
+					// total: amount // will need to get quantity * amount from cart item later
 				}).success(function(){
-
+					console.log("Order Item created");
 				});
 
 			}

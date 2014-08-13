@@ -48,12 +48,11 @@ app.post('/cart/checkout', cart.checkout);
 // Get products
 app.get('/products', product.findAllProducts);
 app.get('/venues/products?:venuename', product.findProductsByVenueName);
-app.get('/venues/products/:id', product.findProductsByVenueId);
+app.get('/venues/:id/products', product.findProductsByVenueId);
 
 // Get orders
 app.get('/orders', order.getOrders);
-app.get('/users/orders/:id', order.getOrdersByUser);
-app.get('/venues/orders/:id', order.getOrdersByVenue);
+app.get('/venues/:id/orders', order.getOrdersByVenue);
 
 // Create User
 app.post('/user', user.create); 
