@@ -28,7 +28,6 @@ exports.findAllProducts = function(request, response){
 
 exports.findProductsByVenueId = function(request, response){
 
-  
 
     models.Product.findAll({ 
       where: 

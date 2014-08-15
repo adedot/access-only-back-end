@@ -58,6 +58,8 @@ app.get('/venues/:id/orders', order.getOrdersByVenue);
 app.post('/user', user.create); 
 
 app.get('/users/', user.findAllUsers);
+// app.get('/users/login', user.login);
+
 app.get('/users/:id', user.findById);
 app.get('/users/?name', user.findByName);
 // app.get('/venues/users/:id'); TODO 

@@ -2,6 +2,7 @@ var config = module.exports = {};
 
 config.env = 'heroku';
 config.hostname = 'localhost';
+config.force = false;
 
 //postgres database
 config = {};
