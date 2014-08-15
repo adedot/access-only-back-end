@@ -58,7 +58,7 @@ app.get('/venues/:id/orders', order.getOrdersByVenue);
 app.post('/user', user.create); 
 
 app.get('/users/', user.findAllUsers);
-// app.get('/users/login', user.login);
+app.post('/users/login', user.login);
 
 app.get('/users/:id', user.findById);
 app.get('/users/?name', user.findByName);
@@ -69,7 +69,6 @@ app.post('/user/:id/banks', user.addBank);
 
 // User Resources to add and charge credit card
 app.post('/user/:id/cards', user.addCard);
-app.post('/user/charge', user.charge);
 
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {

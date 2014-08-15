@@ -19,14 +19,25 @@ var crowdTiltBaseUrl = "https://api-sandbox.crowdtilt.com/v1/"
 
 balanced.configure('ak-test-2gXhcfyZYyhyzYfnMfnr8yUjRkmis49qK');
 
-// Add credit charge
-exports.charge = function(request, response){
+// Login to get access
+exports.login = function(request, response){
 
+  var access_code = request.body['access_code'];
+
+  console.log(access_code);
+
+    switch (access_code) {
+      case "HOWARD":
+        
+      case "DTNATION":
+      case "DC":
+        response.send({code:"OK"});
+        break;
+      default:
+        response.send({code:"FAIL"});
+        break;
+    }
 	
-
-
-	// Will need to use crowdtilt 
-	response.send();
 };
 
 
