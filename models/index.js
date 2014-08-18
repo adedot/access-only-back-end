@@ -57,7 +57,7 @@ var Product = sequelize.import(__dirname + '/Product');
 
 // This should occur after the models 
 sequelize
-  .sync({ force: cfg.force})
+  .sync({ force: false})
   .complete(function(err) {
     if (!!err) {
       console.log('Unable to connect to the database:', err)
