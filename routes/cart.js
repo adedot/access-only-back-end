@@ -11,17 +11,17 @@ exports.addCartItem = function(request, response) {
 	  
 		// check if item is in the cart else create cart item
 		  models.CartItem.findOrCreate({ 
-		  	cartId: request.body['cartid'],
+		  	cartId: request.body['cartId'],
 		  		quantity: request.body['quantity'],
-		   		productId: request.body['productid']
+		   		productId: request.body['productId'], 
+		   		price: request.body['price']
 		   }).success(function(cartItem) {
 		    response.send(cartItem);
 		  }).error(function(err, cartItem){
 
 		  		// Update quantity
-		  		models.CartItem.update({quantity: request.body['quantity'],},{cartId: request.body('cartid'),
-		  		 	productId: request.body['productid']}
-		  		 	)
+		  		models.CartItem.update({quantity: request.body['quantity'],cartId: request.body['cartId'],
+		  		 	productId: request.body['productId']})
 		  		.success(function() {});
 		  });
 
@@ -29,7 +29,7 @@ exports.addCartItem = function(request, response) {
 
 exports.updateCartItem = function(request, response){
 	// Update quantity
-	models.CartItem.update({quantity: request.body['quantity'],},{cartId: request.param['cartid'],
+	models.CartItem.update({quantity: request.body['quantity']},{cartId: request.param['cartid'],
 	 	productId: request.body['productid']}
 	 	)
 	.success(function() {});
@@ -47,6 +47,8 @@ exports.checkout = function(request, response){
 	// get token and amount
 	var amount = parseInt(request.body['amount']);
 	var token = request.body['uri']; 
+
+	var cartId = request.body['cartId'];
 	console.log(token);
 
 	console.log(amount);
@@ -58,12 +60,13 @@ exports.checkout = function(request, response){
 	});
 
 	// Check debit transaction 
-	console.log("Cart id number is " + request.body['cartId']);
+	console.log("Cart id number is " + cartId );
 
 
 	// create order
 	models.Order.create({
 		venueId: request.body['venueId'],
+		transactionId: cartId,
 		contact_name: request.body['name'],
 		contact_email: request.body['email'],
     	contact_phone: request.body['phone'],
@@ -87,7 +90,7 @@ exports.checkout = function(request, response){
 
 				// create order item
 				models.OrderItem.create({
-					orderId: debit_transaction.debits[0].transaction_number,
+					orderId: order.id,
 					productId: cartItems[0].productId,
 					quantity: 1, // Will change later
 					price: amount, // Need to add cartItems.price

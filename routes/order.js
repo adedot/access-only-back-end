@@ -42,7 +42,7 @@ exports.getOrdersByVenue = function(request, response) {
 
 
 
-	var venueId = request.param('id')
+	var venueId = request.param('id');
 
 	if(typeof venueId != 'undefined'){
 	// var escapedName = models.constructor.Utils.escape(venueId);
@@ -52,7 +52,14 @@ exports.getOrdersByVenue = function(request, response) {
 
 		models.sequelize.query(queryWithParams).success(function(orders){
 
-	    	response.send(orders);
+			if(orders.length){
+
+				response.send(orders);
+			}else{
+
+				var orders = [{"id":0,"contact_name":"n/a","contact_email":"na/a","contact_phone":"n/a","status":"n/a","total":"n/a","venueId":1,"userId":"n/a","guestlistId":"n/a","name":"n/a","address":"n/a","city":"n/a","state":"n/a"}];
+			}
+	    	
 	    });
 	}
 	else{

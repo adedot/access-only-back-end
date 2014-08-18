@@ -3,6 +3,7 @@ module.exports = function(sequelize, DataTypes) {
   var Order= sequelize.define('Order', {
   	 // autoIncrement can be used to create auto_incrementing integer columns
   	id: { type: DataTypes.INTEGER, autoIncrement: true },
+    transactionId: DataTypes.STRING,
     contact_name: DataTypes.STRING,
     contact_email: DataTypes.STRING,
     contact_phone: DataTypes.STRING,
