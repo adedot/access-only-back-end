@@ -56,7 +56,10 @@ exports.getProductsByOrder = function(request, response){
 
 
   var sqlQuery = 'select * from orders join cartitems on orders."transactionId" = cartitems."cartId"' +
-          ' where cartitems."cartId" = %s';
+          ' where cartitems."cartId" = \'%s\'';
+
+
+  console.log(sqlQuery);
 
   var transactionId = request.param('id');
 
