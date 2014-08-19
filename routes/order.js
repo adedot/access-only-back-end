@@ -19,6 +19,8 @@ exports.getOrders = function(request, response) {
 
 
 
+
+
 // get orders for person
 exports.getOrdersByUser = function(request, response) {
 
@@ -39,8 +41,6 @@ exports.getOrdersByVenue = function(request, response) {
 
 	var sqlQuery = 'select * from orders join venues ON orders."venueId" = venues.id' +
 					' where venues.id = %s';
-
-
 
 	var venueId = request.param('id');
 

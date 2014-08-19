@@ -47,6 +47,7 @@ app.post('/cart/checkout', cart.checkout);
 
 // Get products
 app.get('/products', product.findAllProducts);
+app.get('/orders/:id/products', product.getProductsByOrder);
 app.get('/venues/products?:venuename', product.findProductsByVenueName);
 app.get('/venues/:id/products', product.findProductsByVenueId);
 

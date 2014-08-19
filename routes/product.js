@@ -1,6 +1,6 @@
 var models = require('../models');
 
-
+var util = require('util');
 
 exports.create = function(request, response) {
 
@@ -50,6 +50,27 @@ exports.findProductsByVenueName = function(request, response){
     response.send(result);
     });
 };
+
+
+exports.getProductsByOrder = function(request, response){
+
+
+  var sqlQuery = 'select * from orders join cartitems on orders."transactionId" = cartitems."cartId"' +
+          ' where cartitems."cartId" = %s';
+
+  var transactionId = request.param('id');
+
+  var queryWithParams = util.format(sqlQuery, String(transactionId));
+  console.log(queryWithParams);
+
+  models.sequelize.query(queryWithParams).success(function(cartitems){
+
+    response.send(cartitems);
+
+  });
+
+}
+
 
 
 
