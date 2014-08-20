@@ -55,7 +55,7 @@ exports.findProductsByVenueName = function(request, response){
 exports.getProductsByOrder = function(request, response){
 
 
-  var sqlQuery = 'select * from orders join cartitems on orders."transactionId" = cartitems."cartId"' +
+  var sqlQuery = 'select * from cartitems join products on products."id" = cartitems."productId"' +
           ' where cartitems."cartId" = \'%s\'';
 
 
