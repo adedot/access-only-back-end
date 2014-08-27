@@ -6,6 +6,12 @@ var balanced = require('balanced-official');
 
 balanced.configure('ak-test-2gXhcfyZYyhyzYfnMfnr8yUjRkmis49qK');
 
+var emailer = require('../utils/email');
+
+var nodemailer = require('nodemailer');
+var premailer = require('premailer-api');
+
+
 // add product to cart
 exports.addCartItem = function(request, response) {
 	  
@@ -47,8 +53,13 @@ exports.checkout = function(request, response){
 	// get token and amount
 	var amount = parseInt(request.body['amount']);
 	var token = request.body['uri']; 
+	var contact_name = request.body['name'];
+	var contact_email =request.body['email'];
+    var	contact_phone = request.body['phone'];
+    var venueName = request.body['venueName'];
 
 	var cartId = request.body['cartId'];
+	
 	console.log(token);
 
 	console.log(amount);
@@ -67,9 +78,9 @@ exports.checkout = function(request, response){
 	models.Order.create({
 		venueId: request.body['venueId'],
 		transactionId: cartId,
-		contact_name: request.body['name'],
-		contact_email: request.body['email'],
-    	contact_phone: request.body['phone'],
+		contact_name: contact_name,
+		contact_email: contact_email,
+    	contact_phone: contact_phone,
     	status: 'Submitted',
     	total: amount
 	}).success(function(order){
@@ -81,25 +92,8 @@ exports.checkout = function(request, response){
 
 		}).success(function(cartItems){
 
-
-			// for each cart item
-			for (item_count in cartItems){
-
-
-				console.log("The cartItem is " + cartItems[item_count]);
-
-				// create order item
-				models.OrderItem.create({
-					orderId: order.id,
-					productId: cartItems[0].productId,
-					quantity: 1, // Will change later
-					price: amount, // Need to add cartItems.price
-					// total: amount // will need to get quantity * amount from cart item later
-				}).success(function(){
-					console.log("Order Item created");
-				});
-
-			}
+			createOrderItems(cartItems, order);
+			emailReceipt(cartId, contact_name, contact_email, contact_phone, amount, venueName);
 				
 		});
 
@@ -108,3 +102,83 @@ exports.checkout = function(request, response){
 	response.send(debit_transaction);
 
 }
+
+var createOrderItems = function(cartItems, order, amount){
+
+
+	// for each cart item
+	for (item_count in cartItems){
+
+
+		console.log("The cartItem is " + cartItems[item_count]);
+
+		// create order item
+		models.OrderItem.create({
+			orderId: order.id,
+			productId: cartItems[0].productId,
+			quantity: 1, // Will change later
+			price: amount, // Need to add cartItems.price
+			// total: amount // will need to get quantity * amount from cart item later
+		}).success(function(){
+			console.log("Order Item created");
+		});
+
+	}
+
+}
+
+var emailReceipt = function(cartid, contact_name, contact_email, contact_phone, amount, venueName){
+
+	// create reusable transporter object using SMTP transport
+	var transporter = nodemailer.createTransport({
+	    service: 'gmail',
+	    auth: {
+	        user: 'info@accesson.ly',
+	        pass: 'Acce$$2014'
+	    }
+	});
+
+		// NB! No need to recreate the transporter object. You can use
+	// the same transporter object for all e-mails
+	var emailTemplate = '<html> \
+	    <head> \
+	      <title>Access Only Receipt: for ' + contact_name + '</title> \
+	      <style type="text/css"> \
+	        a { color: #336699; } \
+	      </style> \
+	    </head> \
+	    <body> \
+	        <p>Name: ' +  contact_name + ' </p> \
+	        <p>Email: ' + contact_email +' </p> \
+	        <p>Phone: ' + contact_phone + '</p>\
+	        <p>Payment Sucessful in the amount of $' + amount + ' for ' +venueName +'</p> \
+	    </body> \
+	  <html>';
+
+
+	var preparedEmail = premailer.prepare({html: emailTemplate }, function(err, email) {
+  
+    // setup e-mail data with unicode symbols
+    var mailOptions = {
+        from: 'Access Only', // sender address
+        to: contact_email, // list of receivers
+        subject: 'Access Only Receipt: for ' + contact_name, // Subject line
+        text: email.text, // plaintext body
+        html: email.html // html body
+    };
+
+    // send mail with defined transport object
+    transporter.sendMail(mailOptions, function(error, info){
+        if(error){
+            console.log(error);
+        }else{
+            console.log('Message sent: ' + info.response);
+        }
+    });
+
+});
+
+
+};
+
+
