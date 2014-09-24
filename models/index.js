@@ -10,7 +10,7 @@ var Sequelize = require('sequelize')
       host: cfg.uri, // localhost or other url
       dialect: "postgres", // or 'sqlite', 'mysql', 'mariadb'
       port:    5432, // or 3306 (for mysql),
-      sync : {force: false}
+      sync : {force: true}
     })
 
 
