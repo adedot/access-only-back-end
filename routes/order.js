@@ -17,10 +17,6 @@ exports.getOrders = function(request, response) {
 
 }
 
-
-
-
-
 // get orders for person
 exports.getOrdersByUser = function(request, response) {
 
@@ -33,7 +29,6 @@ exports.getOrdersByUser = function(request, response) {
     });
 
 }
-
 
 // get orders for the a venue
 exports.getOrdersByVenue = function(request, response) {

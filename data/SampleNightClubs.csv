@@ -1,3 +1,3 @@
-Name,Address,City,State,Zipcode,Phone,Email,url
-Rose Bar,1215 Connecticut Ave NW,Washington,DC,20036, 202 955 5525,Info@RoseBarlounge.com,http://rosebarlounge.com/
-Shadow Room,2131 K. St. NW,Washington,DC,20037,2028871200,info@shadowroom.com,http://shadowroom.com/
+Name,Address,City,State,Zipcode,Phone,Email,url, description
+Rose Bar,1215 Connecticut Ave NW,Washington,DC,20036, 202 955 5525,Info@RoseBarlounge.com,http://rosebarlounge.com/, "A lively dinner with friends, a night out on the town or a private reception for your office - This venue has it all covered with style and finesse. <br/><br/>Dress code: No sneakers!"
+Shadow Room,2131 K. St. NW,Washington,DC,20037,2028871200,info@shadowroom.com,http://shadowroom.com/,"A lively dinner with friends, a night out on the town or a private reception for your office - This venue has it all covered with style and finesse. <br/><br/>Dress code: No sneakers!"

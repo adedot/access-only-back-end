@@ -17,6 +17,9 @@ client = new Client(options_auth);
 
 var crowdTiltBaseUrl = "https://api-sandbox.crowdtilt.com/v1/"
 
+// Balanced API Key
+var balanced = require('balanced-official');
+
 balanced.configure('ak-test-2gXhcfyZYyhyzYfnMfnr8yUjRkmis49qK');
 
 // Login to get access
@@ -90,6 +93,7 @@ exports.addCard = function(request, response){
 }
 
 exports.addBank = function(request, response){
+
 
   var resource = "users/"+request.params['id']+"/banks"
 
