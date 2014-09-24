@@ -9,9 +9,9 @@ Sucessful Testing Credit Cards:
 
 
 // Load Venues Data into venues table
-COPY venues (name,address,city,state,zipcode,phone,email,url) FROM '/Users/Adetola/node-projects/access-only-back-end/data/SampleNightclubs.csv' WITH CSV HEADER
+\COPY venues (name,address,city,state,zipcode,phone,email,url) FROM '/Users/Adetola/node-projects/access-only-back-end/data/SampleNightclubs.csv' WITH CSV HEADER
 
 // Load products data in to products table
 
-COPY products (name, sku, type, brand, price, is_active, is_featured, "venueName", description, "venueId" ) FROM '/Users/Adetola/node-projects/access-only-back-end/data/Products.csv' WITH CSV HEADER;
+\COPY products (name, sku, type, brand, price, is_active, is_featured, "venueName", description, "venueId" ) FROM '/Users/Adetola/node-projects/access-only-back-end/data/Products.csv' WITH CSV HEADER;
 

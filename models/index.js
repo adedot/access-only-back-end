@@ -9,8 +9,7 @@ var Sequelize = require('sequelize')
   , sequelize = new Sequelize(cfg.database, cfg.username, cfg.password, {
       host: cfg.uri, // localhost or other url
       dialect: "postgres", // or 'sqlite', 'mysql', 'mariadb'
-      port:    5432, // or 3306 (for mysql),
-      sync : {force: true}
+      port:    5432 // or 3306 (for mysql),
     })
 
 
@@ -58,7 +57,7 @@ var Product = sequelize.import(__dirname + '/Product');
 
 // This should occur after the models 
 sequelize
-  .sync({ force: true})
+  .sync({ force: false})
   .complete(function(err) {
     if (!!err) {
       console.log('Unable to connect to the database:', err)
