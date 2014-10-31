@@ -1,8 +1,9 @@
 var nodemailer = require('nodemailer');
 var premailer = require('premailer-api');
 
+exports = module.exports = emailReceipt;
 
-var emailReceipt = function(cartid, contact_name, contact_email, contact_phone, amount, venueName){
+function emailReceipt (cartid, contact_name, contact_email, contact_phone, amount, venueName){
 
 	// create reusable transporter object using SMTP transport
 	var transporter = nodemailer.createTransport({
@@ -55,6 +56,3 @@ var emailReceipt = function(cartid, contact_name, contact_email, contact_phone, 
 
 
 };
-
-
-// emailReceipt("11213", "Adetola Adewodu", "adetola.adewodu@gmail.com", "2022762392", "200.00", "Rose Bar");
